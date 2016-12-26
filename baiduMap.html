@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HHfOiMF1lXz132MYste81iypC70HKThF"></script>
+	<title>The instruction of dining hall in ZJU</title>
+</head>
+<body>
+	<h1>The instruction of dining hall in ZJU</h1>
+	<p> This is a site created by wanhsin to introduce the dining halls in zju.</p>
+	<p>Welcome to zju for dinner!!!</p>
+	<div id="allmap" style="width:100%; height: 600px;" ></div>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(120.09677,30.30983);
+	map.centerAndZoom(point, 16);
+	map.enableScrollWheelZoom();  
+	map.enableContinuousZoom();    
+
+	var point1 = new BMap.Point(120.094997,30.30979);
+
+	var marker1 = new BMap.Marker(new BMap.Point(120.090572,30.313999)); 
+	map.addOverlay(marker1);
+	var tag1 = "<h3>清真食堂</h3>"
+				+"<img style='float:right;margin:4px' id='imgDemo' src='http://upload-images.jianshu.io/upload_images/3956428-72aed24c08a13ca9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='125' height='100' title='清真'/>"
+				+"<p>紫金港食堂大楼二楼西侧</p>"
+				+"<p>早餐6:30-9:00，中餐11:00-13:00，晚餐16:30-18:30</p>"
+				+title='清真食堂';                 
+	var infoWindow1 = new BMap.InfoWindow(tag1);
+	marker1.addEventListener("click", function(){this.openInfoWindow(infoWindow1);});
+
+	var marker2 = new BMap.Marker(new BMap.Point(120.091739,30.313782)); 
+	map.addOverlay(marker2); 
+	var tag2 = "<h3>风味食堂</h3>" 
+				+"<img style='float:right;margin:4px' id='imgDemo' src='http://upload-images.jianshu.io/upload_images/3956428-c08735de33534b16.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='125' height='100' title='风味'/>"
+				+"<p>紫金港食堂大楼一层东侧</p>"
+                +"<p>上午7:00-14：00 下午16：30-19：30</p>";  				
+	var infoWindow2 = new BMap.InfoWindow(tag2);
+	marker2.addEventListener("click", function(){this.openInfoWindow(infoWindow2); });
+	
+
+	var marker3 = new BMap.Marker(new BMap.Point(120.090608,30.31347)); 
+	map.addOverlay(marker3);
+	var tag3 = "<h3>休闲食堂</h3>"
+	            +"<img style='float:right;margin:4px' id='imgDemo' src='http://upload-images.jianshu.io/upload_images/3956428-1d23cc425b81a9c4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/124' width='125' height='100' title='休闲'/>"
+				+"<p>紫金港食堂大楼一层西侧</p>"
+                +"<p>早餐6:30-9:00中餐11：00-13：00晚餐16：30-18：30</p>";                  
+	var infoWindow3 = new BMap.InfoWindow(tag3);
+	marker3.addEventListener("click", function(){this.openInfoWindow(infoWindow3);});
+	
+
+	var marker4 = new BMap.Marker(new BMap.Point(120.092045,30.309752)); 
+	map.addOverlay(marker4); 
+	var tag4 = "<h3>临湖食堂</h3>"  
+			+"<img style='float:right;margin:4px' id='imgDemo' src='http://upload-images.jianshu.io/upload_images/3956428-8a585a27a1f919aa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='125' height='100' title='临湖'/>"  
+			+"<p>紫金港校区小剧场西侧（毗邻启真湖）</p>"
+            +"<p>中餐11：00-13：30晚餐16：30-21：30</p>";  			
+	var infoWindow4 = new BMap.InfoWindow(tag4);
+	marker4.addEventListener("click", function(){this.openInfoWindow(infoWindow4);});
+	
+	var marker5 = new BMap.Marker(new BMap.Point(120.0935,30.301786)); 
+	map.addOverlay(marker5);   
+	var tag5 = "<h3>麦香食堂</h3>" 
+				+"<img style='float:right;margin:4px' id='imgDemo' src='http://upload-images.jianshu.io/upload_images/3956428-ebdec76c6f950b81.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='125' height='100' title='麦香'/>"   
+				+"<p>紫金港医学专业图书馆一楼</p>"
+                +"<p>中餐11：00-13：00晚餐16：30-18：30</p>";  				
+	var infoWindow5 = new BMap.InfoWindow(tag5);
+	marker5.addEventListener("click", function(){this.openInfoWindow(infoWindow5);});
+	
+
+	var marker6 = new BMap.Marker(new BMap.Point(120.091722,30.314148)); 
+	map.addOverlay(marker6);
+	var tag6 = "<h3>东区食堂</h3>"                 
+			+"<img style='float:right;margin:4px' id='imgDemo' src=' http://upload-images.jianshu.io/upload_images/3956428-67edcc3bb71616af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 ' width='125' height='100' title='东区'/>"
+			+"<p>紫金港食堂大楼二层东侧</p>" 
+			+"<p>中餐11：00-13：00晚餐16：30-18：30</p>";  	
+	var infoWindow6 = new BMap.InfoWindow(tag6);
+	marker6.addEventListener("click", function(){this.openInfoWindow(infoWindow6);});
+
+
+	
+</script>
